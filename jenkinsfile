@@ -1,10 +1,10 @@
 pipeline {
-    agent { 'qt' }
+    agent ('qt')
     stages {
         stage('git') {
             steps {
-                git branch: 'main', 
-              url: 'https://github.com/sunnisuneel/spring-petclinic-1.git'
+             url: 'https://github.com/sunnisuneel/spring-petclinic-1.git',
+             branch: 'main'
             }
         }
         stage('build') {
